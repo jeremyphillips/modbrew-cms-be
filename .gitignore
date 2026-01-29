@@ -1,0 +1,44 @@
+# Node modules
+node_modules/
+.pnp/
+.pnp.js
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# TypeScript
+dist/
+build/
+*.tsbuildinfo
+
+# MongoDB data directories (local DB files)
+data/db/
+mongo/dbs/
+mongo/logs/
+
+# Editor directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Yarn
+yarn-error.log
+yarn-debug.log*
+.yarn-integrity

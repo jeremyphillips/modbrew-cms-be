@@ -1,0 +1,38 @@
+{
+  "name": "modbrew-cms-be",
+  "version": "0.1.0",
+  "description": "Backend for CMS using Node.js, Express, and MongoDB",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev:api": "nodemon src/index.ts",
+    "dev": "yarn dev:api"
+  },
+  "_moduleAliases": {
+    "~routes": "routes",
+    "~models": "models",
+    "~controllers": "controllers"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "module-alias": "^2.2.3",
+    "mongoose": "^7.4.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "cms",
+    "backend",
+    "express",
+    "mongodb"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
