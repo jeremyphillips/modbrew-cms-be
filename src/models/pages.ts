@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const pageSchema = new mongoose.Schema(
   {
@@ -12,7 +12,7 @@ const pageSchema = new mongoose.Schema(
     },
     components: {
       type: Array,
-      required: false
+      required: false,
     },
     seo: {
       title: {
@@ -23,12 +23,12 @@ const pageSchema = new mongoose.Schema(
         type: String,
         required: false,
       },
-    }
+    },
   },
   {
     timestamps: true, // This will automatically add createdAt and updatedAt fields
-  }
-)
+  },
+);
 
-const Page = mongoose.model('Component', pageSchema)
-export default Page
+const Page = mongoose.model("Component", pageSchema);
+export default Page;

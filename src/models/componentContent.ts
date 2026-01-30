@@ -1,19 +1,19 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 // Define the schema for component content
 const componentContentSchema = new mongoose.Schema(
   {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     componentName: {
       type: String,
-      required: true
+      required: true,
     },
     schemaId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'ComponentSchema', // References the Component schema
+      ref: "ComponentSchema", // References the Component schema
       required: true,
     },
     props: {
@@ -23,20 +23,23 @@ const componentContentSchema = new mongoose.Schema(
     },
     createdBy: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User', // Assuming you have a User model to track who created the content
+      ref: "User", // Assuming you have a User model to track who created the content
       required: false,
     },
     updatedBy: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User', // Tracks who last updated the content
+      ref: "User", // Tracks who last updated the content
       required: false,
     },
   },
   {
     timestamps: true, // Automatically adds createdAt and updatedAt fields
-  }
-)
+  },
+);
 
 // Create the model
-const ComponentContent = mongoose.model('ComponentContent', componentContentSchema)
-export default ComponentContent
+const ComponentContent = mongoose.model(
+  "ComponentContent",
+  componentContentSchema,
+);
+export default ComponentContent;

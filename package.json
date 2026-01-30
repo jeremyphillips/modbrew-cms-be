@@ -5,8 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev:api": "nodemon src/index.ts",
-    "dev": "yarn dev:api"
+    "dev:api": "tsx watch ./src/index.ts",
+    "dev": "yarn dev:api",
+    "prepare": "husky",
+    "pre-commit": "tsc --noEmit && eslint 'src/**/*.{ts,tsx}' && prettier --check 'src/**/*.{ts,tsx,js,jsx,json,css,scss,md}'",
+    "prettier:check": "prettier --check 'src/**/*.{ts,tsx,js,jsx,json,css,scss,md}'",
+    "prettier:fix": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json,css,scss,md}'"
   },
   "_moduleAliases": {
     "~routes": "routes",
@@ -21,8 +25,23 @@
     "mongoose": "^7.4.2"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
     "concurrently": "^9.2.1",
-    "nodemon": "^3.0.2"
+    "eslint": "^9.39.2",
+    "eslint-plugin-react": "^7.37.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.8.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.54.0"
   },
   "engines": {
     "node": ">=18.0.0"
